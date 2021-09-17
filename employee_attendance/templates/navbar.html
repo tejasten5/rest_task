@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <div class="col-12 float-right">
+            {% if request.user.is_authenticated %}
+                <h4 class="float-right">Welcome,{{request.user.username}}</h4> 
+                <a href="/logout/"><span class="icon color12"><i class="fa  fa-sign-in"></i></span>Logout</a>
+                            
+            {% else %}
+            <h4 class="float-right">Welcome,Anonymous</h4>  
+            {% endif %}
+
+
+        </div>
+  
+      <!-- logout functionality -->
+    </div>
+  </nav>
+
+

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+
+{% block css %}   
+<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+{% endblock %}
+
+
+{% block content %}
+
+    <!-- Trigger the modal with a button -->
+ 
+    
+
+    <div class="row">
+        <div class="col-1"><h5><span class="badge rounded-pill badge-success present_emp"></span></h5></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-1"><h5><span class="badge rounded-pill badge-danger absent_emp"></span></h5></div>
+        <div class="col-3">                
+        </div>            
+        <div class="col-6"></div>
+    </div>
+    <table id="mytable" class="table table-hover"> </table>  
+    
+{% endblock %}
+
+
+{% block js %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src = "{% static 'custom_js\home.js' %}"></script>
+{% endblock %}

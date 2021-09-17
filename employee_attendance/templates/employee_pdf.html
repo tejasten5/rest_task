@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee</title>
+<style>
+
+    body {        
+        font-size: 14px;
+    }
+    table {
+        margin-bottom: 1rem;
+        border: 2px solid #ccc;
+        border-spacing: 0;
+    }
+    tr, td {
+        padding: 4px;
+        border: 1px solid #ccc;
+    }
+    th {
+        padding: 6px;
+        background-color: #343B52;
+        color: white;
+        
+        border: 2px solid #ccc;
+        text-align: center;
+    }
+    .odd {
+        background-color: #ededed;
+    }
+    .table_content {
+        width: 100%;
+    }
+    .table_content tr td{
+        border: 2px solid #ccc;
+        padding: 6px;
+    }
+    .w-15{
+        width: 15%;
+    }
+</style>
+</head>
+<body>
+
+
+<table width="100%" border="1" class="table_content">
+   
+    <tbody>
+        <tr>
+            <th>Sr.No.</th>
+            <th>Date</th>
+            <th>Employee NAME</th>
+            <th>IN Time</th>
+            <th>OUT Time</th>
+            <th>Status</th>
+        </tr>
+
+        {% for employee in employees %}
+                
+            
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{today}}</td>                
+                <td>{{employee.name}}</td>
+                <td>{{employee.in_time}}</td>
+                <td>{{employee.out_time}}</td>
+                <td>{{employee.status}}</td>
+               
+                
+            </tr>
+           
+       
+
+            {% endfor %}
+
+
+
+        
+    </tbody>
+</table>
+
+</body>
+</html>
