@@ -7,6 +7,10 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         try:
-            Employee.objects.all().update(status = False)
+            
+            for user in User.objects.all():                
+                EmployeeAttendanceRecord.objects.create(
+                    employees = user
+                )
         except Exception as e:
-            self.stdout.write(self.style.WARNING(str(e)))
+            print(e)

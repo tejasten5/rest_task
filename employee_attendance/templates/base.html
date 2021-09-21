@@ -13,7 +13,7 @@
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.css">
 
-
+    
     {% block css %}
     {% endblock %}
     
@@ -33,7 +33,7 @@
     <div class="container-fluid">
       {% include 'navbar.html' %}<br>
       <button type="button" class="btn btn-primary float-right"  data-toggle="modal" data-target="#myModal">Add User</button> &nbsp;&nbsp;&nbsp;
-      <a href="{% url 'export_pdf' %}" download="EmployeePDF">
+      <a id="export_pdf_link" download="EmployeePDF">
         <button class="btn btn-success export_pdf" type="button" style="float: right;">
           PDF
       </button>

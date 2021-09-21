@@ -9,7 +9,10 @@
         <div class="col-12 float-right">
             {% if request.user.is_authenticated %}
                 <h4 class="float-right">Welcome,{{request.user.username}}</h4> 
+                <div style="padding-top: 6px;">
                 <a href="/logout/"><span class="icon color12"><i class="fa  fa-sign-in"></i></span>Logout</a>
+
+                </div>
                             
             {% else %}
             <h4 class="float-right">Welcome,Anonymous</h4>  
