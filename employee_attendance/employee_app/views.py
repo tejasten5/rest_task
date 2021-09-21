@@ -72,7 +72,6 @@ class EmployeeListAPI(LoginRequiredMixin,viewsets.ModelViewSet):
                 'employees__is_superuser' : False,
 
         })
-        print(filter_kwargs)   
         return EmployeeAttendanceRecord.objects.filter(**filter_kwargs).order_by('-created_at')
 
     def get_ordered_query(self, user_query, request):        
